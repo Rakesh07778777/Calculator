@@ -1,7 +1,7 @@
-const button = document.querySelectorAll('.btn')
-
-button.forEach((buttonElm) => {
-    buttonElm.addEventListener('click', () => {
-        console.log('button clicked')
-    })
-})
+const numberButtons = document.querySelectorAll('[data-number]')
+const operationButtons = document.querySelectorAll('[data-operation]')
+const equalsButton = document.querySelector('[data-equals]')
+const deleteButton = document.querySelector('[data-delete]')
+const allClearButton = document.querySelector('[data-all-clear]')
+const previousOperandTextElm = document.querySelector('[data-previous-operand]')
+const currentOperandTextElm = document.querySelector('[data-current-operand]')
