@@ -57,9 +57,18 @@
         
     }
 
+    getDisplayNumber(){
+        const floatNumber = parseFloat(number)
+        if(isNaN(floatNumber)) return ''
+        return floatNumber.toLocaleString('en')
+    }
+
     updateDisplay() {
-        this.currentOperandTextElm.innerText = this.currentOperand
-        this.previousOperandTextElm.innerText = this.previousOperand
+        this.currentOperandTextElm.innerText = this.getDisplayNumber(this.currentOperand)
+        if(this.operation != null){
+        this.previousOperandTextElm.innerText = 
+        `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        }
     }
 }
 
